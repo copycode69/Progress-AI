@@ -4,18 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Progress AI</title>
+    <title>Progress AI & Todo List</title>
+
     <link rel="stylesheet" href="index.css" />
-    <script defer src="index.js"></script>
     <style>
       body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
         min-width: 250px;
       }
+      #chatbox {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+      }
+      #userInput {
+        width: 80%;
+        padding: 10px;
+      }
+      #sendBtn {
+        width: 15%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      h1, h2 {
+        margin-top: 20px;
+      }
     </style>
+
+    <script defer src="index.js"></script>
   </head>
   <body>
+    <!-- AI Chatbot Section -->
+    <h1>AI Chatbot</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button id="sendBtn">Send</button>
+
+    <!-- Todo List Section -->
+    <h1>Today Todo List</h1>
     <form>
-      <h1>Today Todo List</h1>
       <section>
         <h2>Add new item</h2>
         <label>
@@ -55,7 +89,7 @@
       </section>
     </form>
 
-   
+    
     <template id="table-item">
       <tr>
         <td><a>Title</a></td>
@@ -73,7 +107,7 @@
       </tr>
     </template>
 
-   
     <script src="popup.js"></script>
+    <script src="request.js"></script>
   </body>
 </html>
